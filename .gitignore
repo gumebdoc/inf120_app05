@@ -1,0 +1,21 @@
+# Executables / compilations
+*.exe
+*.o
+*.ppu
+*.compiled
+*.log
+
+# Lazarus backup and session
+backup/
+*.lps
+lib/
+
+# Word/PDF temp files
+~$*
+*.tmp
+
+# Tags and IDE
+.vscode/
+GPATH
+GRTAGS
+GTAGS

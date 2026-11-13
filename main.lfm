@@ -1,0 +1,541 @@
+object FormMain: TFormMain
+  Left = 180
+  Height = 750
+  Top = 60
+  Width = 1060
+  Caption = 'UAGRM - FICCT | INF120 Programacion I | Aplicacion U5: Clase Matriz'
+  ClientHeight = 750
+  ClientWidth = 1060
+  Color = clBtnFace
+  Font.Color = clBlack
+  Font.Height = -13
+  Font.Name = 'Segoe UI'
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  Position = poScreenCenter
+  LCLVersion = '2.2.6.0'
+  object LabelTitulo: TLabel
+    Left = 20
+    Height = 25
+    Top = 10
+    Width = 600
+    Caption = 'UAGRM - FICCT | Programación I (INF120) - Aplicación U5: Clase Matriz'
+    Font.Color = clNavy
+    Font.Height = -18
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object LabelSubtitulo: TLabel
+    Left = 20
+    Height = 17
+    Top = 36
+    Width = 600
+    Caption = 'Operaciones de Matriz General y Matriz Cuadrada con Interfaz Gráfica (LCL / Lazarus)'
+    Font.Color = clGray
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    ParentColor = False
+    ParentFont = False
+  end
+  object LabelAutor: TLabel
+    Left = 640
+    Height = 17
+    Top = 12
+    Width = 390
+    Alignment = taRightJustify
+    Caption = 'Estudiante: Gustavo Melgar Baldivieso | Reg: 213195623'
+    Font.Color = clMaroon
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object GroupBoxA: TGroupBox
+    Left = 20
+    Height = 290
+    Top = 60
+    Width = 325
+    Caption = ' Matriz A '
+    ClientHeight = 270
+    ClientWidth = 321
+    TabOrder = 0
+    object LabelFilsA: TLabel
+      Left = 10
+      Height = 17
+      Top = 8
+      Width = 25
+      Caption = 'Fils:'
+      ParentColor = False
+    end
+    object EditFilsA: TEdit
+      Left = 40
+      Height = 23
+      Top = 5
+      Width = 35
+      TabOrder = 0
+      Text = '3'
+    end
+    object LabelColsA: TLabel
+      Left = 85
+      Height = 17
+      Top = 8
+      Width = 28
+      Caption = 'Cols:'
+      ParentColor = False
+    end
+    object EditColsA: TEdit
+      Left = 118
+      Height = 23
+      Top = 5
+      Width = 35
+      TabOrder = 1
+      Text = '3'
+    end
+    object ButtonDimA: TButton
+      Left = 160
+      Height = 25
+      Top = 4
+      Width = 72
+      Caption = 'Dimensionar'
+      OnClick = ButtonDimAClick
+      TabOrder = 2
+    end
+    object ButtonLimpiarA: TButton
+      Left = 238
+      Height = 25
+      Top = 4
+      Width = 72
+      Caption = 'Limpiar'
+      OnClick = ButtonLimpiarAClick
+      TabOrder = 3
+    end
+    object StringGridA: TStringGrid
+      Left = 10
+      Height = 180
+      Top = 38
+      Width = 300
+      ColCount = 3
+      DefaultColWidth = 50
+      DefaultRowHeight = 26
+      FixedCols = 0
+      FixedRows = 0
+      Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing, goSmoothScroll]
+      RowCount = 3
+      TabOrder = 4
+    end
+    object ButtonAleatorioA: TButton
+      Left = 10
+      Height = 26
+      Top = 228
+      Width = 95
+      Caption = 'Aleatorio'
+      OnClick = ButtonAleatorioAClick
+      TabOrder = 5
+    end
+    object ButtonCerosA: TButton
+      Left = 112
+      Height = 26
+      Top = 228
+      Width = 95
+      Caption = 'Cargar Ceros'
+      OnClick = ButtonCerosAClick
+      TabOrder = 6
+    end
+    object ButtonEjemploA: TButton
+      Left = 214
+      Height = 26
+      Top = 228
+      Width = 95
+      Caption = 'Ejemplo A'
+      OnClick = ButtonEjemploAClick
+      TabOrder = 7
+    end
+  end
+  object GroupBoxB: TGroupBox
+    Left = 365
+    Height = 290
+    Top = 60
+    Width = 325
+    Caption = ' Matriz B '
+    ClientHeight = 270
+    ClientWidth = 321
+    TabOrder = 1
+    object LabelFilsB: TLabel
+      Left = 10
+      Height = 17
+      Top = 8
+      Width = 25
+      Caption = 'Fils:'
+      ParentColor = False
+    end
+    object EditFilsB: TEdit
+      Left = 40
+      Height = 23
+      Top = 5
+      Width = 35
+      TabOrder = 0
+      Text = '3'
+    end
+    object LabelColsB: TLabel
+      Left = 85
+      Height = 17
+      Top = 8
+      Width = 28
+      Caption = 'Cols:'
+      ParentColor = False
+    end
+    object EditColsB: TEdit
+      Left = 118
+      Height = 23
+      Top = 5
+      Width = 35
+      TabOrder = 1
+      Text = '3'
+    end
+    object ButtonDimB: TButton
+      Left = 160
+      Height = 25
+      Top = 4
+      Width = 72
+      Caption = 'Dimensionar'
+      OnClick = ButtonDimBClick
+      TabOrder = 2
+    end
+    object ButtonLimpiarB: TButton
+      Left = 238
+      Height = 25
+      Top = 4
+      Width = 72
+      Caption = 'Limpiar'
+      OnClick = ButtonLimpiarBClick
+      TabOrder = 3
+    end
+    object StringGridB: TStringGrid
+      Left = 10
+      Height = 180
+      Top = 38
+      Width = 300
+      ColCount = 3
+      DefaultColWidth = 50
+      DefaultRowHeight = 26
+      FixedCols = 0
+      FixedRows = 0
+      Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing, goSmoothScroll]
+      RowCount = 3
+      TabOrder = 4
+    end
+    object ButtonAleatorioB: TButton
+      Left = 10
+      Height = 26
+      Top = 228
+      Width = 95
+      Caption = 'Aleatorio'
+      OnClick = ButtonAleatorioBClick
+      TabOrder = 5
+    end
+    object ButtonCerosB: TButton
+      Left = 112
+      Height = 26
+      Top = 228
+      Width = 95
+      Caption = 'Cargar Ceros'
+      OnClick = ButtonCerosBClick
+      TabOrder = 6
+    end
+    object ButtonEjemploB: TButton
+      Left = 214
+      Height = 26
+      Top = 228
+      Width = 95
+      Caption = 'Ejemplo B'
+      OnClick = ButtonEjemploBClick
+      TabOrder = 7
+    end
+  end
+  object GroupBoxC: TGroupBox
+    Left = 710
+    Height = 290
+    Top = 60
+    Width = 330
+    Caption = ' Matriz Resultado (C) '
+    ClientHeight = 270
+    ClientWidth = 326
+    TabOrder = 2
+    object LabelInfoC: TLabel
+      Left = 10
+      Height = 17
+      Top = 8
+      Width = 190
+      Caption = 'Resultado de Operaciones'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object ButtonLimpiarC: TButton
+      Left = 235
+      Height = 25
+      Top = 4
+      Width = 80
+      Caption = 'Limpiar C'
+      OnClick = ButtonLimpiarCClick
+      TabOrder = 0
+    end
+    object StringGridC: TStringGrid
+      Left = 10
+      Height = 180
+      Top = 38
+      Width = 305
+      ColCount = 3
+      DefaultColWidth = 50
+      DefaultRowHeight = 26
+      FixedCols = 0
+      FixedRows = 0
+      Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goSmoothScroll]
+      RowCount = 3
+      TabOrder = 1
+    end
+    object ButtonCopiarCA: TButton
+      Left = 10
+      Height = 26
+      Top = 228
+      Width = 145
+      Caption = 'Copiar C -> Matriz A'
+      OnClick = ButtonCopiarCAClick
+      TabOrder = 2
+    end
+    object ButtonCopiarCB: TButton
+      Left = 168
+      Height = 26
+      Top = 228
+      Width = 145
+      Caption = 'Copiar C -> Matriz B'
+      OnClick = ButtonCopiarCBClick
+      TabOrder = 3
+    end
+  end
+  object GroupBoxGeneral: TGroupBox
+    Left = 20
+    Height = 225
+    Top = 360
+    Width = 240
+    Caption = ' A) Matriz General (sobre A) '
+    ClientHeight = 205
+    ClientWidth = 236
+    TabOrder = 3
+    object ButtonCargarA: TButton
+      Left = 15
+      Height = 36
+      Top = 12
+      Width = 205
+      Caption = '1. Cargar desde Celdas'
+      OnClick = ButtonCargarAClick
+      TabOrder = 0
+    end
+    object ButtonMostrarA: TButton
+      Left = 15
+      Height = 36
+      Top = 58
+      Width = 205
+      Caption = '2. Mostrar en Registro'
+      OnClick = ButtonMostrarAClick
+      TabOrder = 1
+    end
+    object ButtonBusquedaA: TButton
+      Left = 15
+      Height = 36
+      Top = 104
+      Width = 205
+      Caption = '3. Búsqueda de Elemento'
+      OnClick = ButtonBusquedaAClick
+      TabOrder = 2
+    end
+    object ButtonOrdenamientoA: TButton
+      Left = 15
+      Height = 36
+      Top = 150
+      Width = 205
+      Caption = '4. Ordenamiento Ascendente'
+      OnClick = ButtonOrdenamientoAClick
+      TabOrder = 3
+    end
+  end
+  object GroupBoxCuadrada: TGroupBox
+    Left = 275
+    Height = 225
+    Top = 360
+    Width = 520
+    Caption = ' B) Matriz Cuadrada (sobre A) '
+    ClientHeight = 205
+    ClientWidth = 516
+    TabOrder = 4
+    object ButtonTriangularesA: TButton
+      Left = 12
+      Height = 36
+      Top = 12
+      Width = 155
+      Caption = 'Verif. Triangulares'
+      OnClick = ButtonTriangularesAClick
+      TabOrder = 0
+    end
+    object ButtonHacerTriangSup: TButton
+      Left = 12
+      Height = 36
+      Top = 58
+      Width = 155
+      Caption = 'Gen. Triang. Superior'
+      OnClick = ButtonHacerTriangSupClick
+      TabOrder = 1
+    end
+    object ButtonHacerTriangInf: TButton
+      Left = 12
+      Height = 36
+      Top = 104
+      Width = 155
+      Caption = 'Gen. Triang. Inferior'
+      OnClick = ButtonHacerTriangInfClick
+      TabOrder = 2
+    end
+    object ButtonInvertirA: TButton
+      Left = 12
+      Height = 36
+      Top = 150
+      Width = 155
+      Caption = 'Invertir Elementos'
+      OnClick = ButtonInvertirAClick
+      TabOrder = 3
+    end
+    object ButtonDiagPrincipalA: TButton
+      Left = 178
+      Height = 36
+      Top = 12
+      Width = 155
+      Caption = 'Diagonal Principal'
+      OnClick = ButtonDiagPrincipalAClick
+      TabOrder = 4
+    end
+    object ButtonDiagSecundariaA: TButton
+      Left = 178
+      Height = 36
+      Top = 58
+      Width = 155
+      Caption = 'Diagonal Secundaria'
+      OnClick = ButtonDiagSecundariaAClick
+      TabOrder = 5
+    end
+    object ButtonDeterminanteA: TButton
+      Left = 178
+      Height = 82
+      Top = 104
+      Width = 155
+      Caption = 'Determinante det(A)'
+      Font.Style = [fsBold]
+      OnClick = ButtonDeterminanteAClick
+      ParentFont = False
+      TabOrder = 6
+    end
+    object ButtonTranspuestaA: TButton
+      Left = 345
+      Height = 82
+      Top = 12
+      Width = 155
+      Caption = 'Transpuesta (A^T)'
+      Font.Style = [fsBold]
+      OnClick = ButtonTranspuestaAClick
+      ParentFont = False
+      TabOrder = 7
+    end
+    object ButtonInversaA: TButton
+      Left = 345
+      Height = 82
+      Top = 104
+      Width = 155
+      Caption = 'Matriz Inversa (A^-1)'
+      Font.Style = [fsBold]
+      OnClick = ButtonInversaAClick
+      ParentFont = False
+      TabOrder = 8
+    end
+  end
+  object GroupBoxBinarias: TGroupBox
+    Left = 810
+    Height = 225
+    Top = 360
+    Width = 230
+    Caption = ' Operaciones Binarias '
+    ClientHeight = 205
+    ClientWidth = 226
+    TabOrder = 5
+    object ButtonSumar: TButton
+      Left = 15
+      Height = 36
+      Top = 12
+      Width = 195
+      Caption = 'Sumar: C = A + B'
+      OnClick = ButtonSumarClick
+      TabOrder = 0
+    end
+    object ButtonRestar: TButton
+      Left = 15
+      Height = 36
+      Top = 58
+      Width = 195
+      Caption = 'Restar: C = A - B'
+      OnClick = ButtonRestarClick
+      TabOrder = 1
+    end
+    object ButtonMultiplicar: TButton
+      Left = 15
+      Height = 36
+      Top = 104
+      Width = 195
+      Caption = 'Multiplicar: C = A * B'
+      OnClick = ButtonMultiplicarClick
+      TabOrder = 2
+    end
+    object ButtonDemoCompleta: TButton
+      Left = 15
+      Height = 36
+      Top = 150
+      Width = 195
+      Caption = 'Demostración Rápida'
+      Font.Style = [fsBold]
+      OnClick = ButtonDemoCompletaClick
+      ParentFont = False
+      TabOrder = 3
+    end
+  end
+  object GroupBoxLog: TGroupBox
+    Left = 20
+    Height = 140
+    Top = 595
+    Width = 1020
+    Caption = ' Registro de Operaciones y Resultados '
+    ClientHeight = 120
+    ClientWidth = 1016
+    TabOrder = 6
+    object MemoLog: TMemo
+      Left = 15
+      Height = 98
+      Top = 10
+      Width = 880
+      Font.Name = 'Consolas'
+      Font.Height = -12
+      ParentFont = False
+      ReadOnly = True
+      ScrollBars = ssAutoBoth
+      TabOrder = 0
+    end
+    object ButtonLimpiarLog: TButton
+      Left = 908
+      Height = 98
+      Top = 10
+      Width = 95
+      Caption = 'Limpiar'#13#10'Registro'
+      OnClick = ButtonLimpiarLogClick
+      TabOrder = 1
+    end
+  end
+end
