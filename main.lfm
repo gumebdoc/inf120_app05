@@ -10,15 +10,14 @@ object FormMain: TFormMain
   Font.Color = clBlack
   Font.Height = -13
   Font.Name = 'Segoe UI'
+  Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  Position = poScreenCenter
-  LCLVersion = '2.2.6.0'
   object LabelTitulo: TLabel
     Left = 20
     Height = 25
     Top = 10
-    Width = 600
+    Width = 604
     Caption = 'UAGRM - FICCT | Programación I (INF120) - Aplicación U5: Clase Matriz'
     Font.Color = clNavy
     Font.Height = -18
@@ -27,23 +26,11 @@ object FormMain: TFormMain
     ParentColor = False
     ParentFont = False
   end
-  object LabelSubtitulo: TLabel
-    Left = 20
-    Height = 17
-    Top = 36
-    Width = 600
-    Caption = 'Operaciones de Matriz General y Matriz Cuadrada con Interfaz Gráfica (LCL / Lazarus)'
-    Font.Color = clGray
-    Font.Height = -13
-    Font.Name = 'Segoe UI'
-    ParentColor = False
-    ParentFont = False
-  end
   object LabelAutor: TLabel
     Left = 640
     Height = 17
     Top = 12
-    Width = 390
+    Width = 343
     Alignment = taRightJustify
     Caption = 'Estudiante: Gustavo Melgar Baldivieso | Reg: 213195623'
     Font.Color = clMaroon
@@ -59,20 +46,21 @@ object FormMain: TFormMain
     Top = 60
     Width = 325
     Caption = ' Matriz A '
-    ClientHeight = 270
+    ClientHeight = 268
     ClientWidth = 321
+    ParentBackground = False
     TabOrder = 0
     object LabelFilsA: TLabel
       Left = 10
       Height = 17
       Top = 8
-      Width = 25
+      Width = 21
       Caption = 'Fils:'
       ParentColor = False
     end
     object EditFilsA: TEdit
       Left = 40
-      Height = 23
+      Height = 25
       Top = 5
       Width = 35
       TabOrder = 0
@@ -88,7 +76,7 @@ object FormMain: TFormMain
     end
     object EditColsA: TEdit
       Left = 118
-      Height = 23
+      Height = 25
       Top = 5
       Width = 35
       TabOrder = 1
@@ -100,8 +88,8 @@ object FormMain: TFormMain
       Top = 4
       Width = 72
       Caption = 'Dimensionar'
-      OnClick = ButtonDimAClick
       TabOrder = 2
+      OnClick = ButtonDimAClick
     end
     object ButtonLimpiarA: TButton
       Left = 238
@@ -109,8 +97,8 @@ object FormMain: TFormMain
       Top = 4
       Width = 72
       Caption = 'Limpiar'
-      OnClick = ButtonLimpiarAClick
       TabOrder = 3
+      OnClick = ButtonLimpiarAClick
     end
     object StringGridA: TStringGrid
       Left = 10
@@ -132,8 +120,8 @@ object FormMain: TFormMain
       Top = 228
       Width = 95
       Caption = 'Aleatorio'
-      OnClick = ButtonAleatorioAClick
       TabOrder = 5
+      OnClick = ButtonAleatorioAClick
     end
     object ButtonCerosA: TButton
       Left = 112
@@ -141,8 +129,8 @@ object FormMain: TFormMain
       Top = 228
       Width = 95
       Caption = 'Cargar Ceros'
-      OnClick = ButtonCerosAClick
       TabOrder = 6
+      OnClick = ButtonCerosAClick
     end
     object ButtonEjemploA: TButton
       Left = 214
@@ -150,8 +138,8 @@ object FormMain: TFormMain
       Top = 228
       Width = 95
       Caption = 'Ejemplo A'
-      OnClick = ButtonEjemploAClick
       TabOrder = 7
+      OnClick = ButtonEjemploAClick
     end
   end
   object GroupBoxB: TGroupBox
@@ -160,20 +148,21 @@ object FormMain: TFormMain
     Top = 60
     Width = 325
     Caption = ' Matriz B '
-    ClientHeight = 270
+    ClientHeight = 268
     ClientWidth = 321
+    ParentBackground = False
     TabOrder = 1
     object LabelFilsB: TLabel
       Left = 10
       Height = 17
       Top = 8
-      Width = 25
+      Width = 21
       Caption = 'Fils:'
       ParentColor = False
     end
     object EditFilsB: TEdit
       Left = 40
-      Height = 23
+      Height = 25
       Top = 5
       Width = 35
       TabOrder = 0
@@ -189,7 +178,7 @@ object FormMain: TFormMain
     end
     object EditColsB: TEdit
       Left = 118
-      Height = 23
+      Height = 25
       Top = 5
       Width = 35
       TabOrder = 1
@@ -201,8 +190,8 @@ object FormMain: TFormMain
       Top = 4
       Width = 72
       Caption = 'Dimensionar'
-      OnClick = ButtonDimBClick
       TabOrder = 2
+      OnClick = ButtonDimBClick
     end
     object ButtonLimpiarB: TButton
       Left = 238
@@ -210,8 +199,8 @@ object FormMain: TFormMain
       Top = 4
       Width = 72
       Caption = 'Limpiar'
-      OnClick = ButtonLimpiarBClick
       TabOrder = 3
+      OnClick = ButtonLimpiarBClick
     end
     object StringGridB: TStringGrid
       Left = 10
@@ -233,8 +222,8 @@ object FormMain: TFormMain
       Top = 228
       Width = 95
       Caption = 'Aleatorio'
-      OnClick = ButtonAleatorioBClick
       TabOrder = 5
+      OnClick = ButtonAleatorioBClick
     end
     object ButtonCerosB: TButton
       Left = 112
@@ -242,8 +231,8 @@ object FormMain: TFormMain
       Top = 228
       Width = 95
       Caption = 'Cargar Ceros'
-      OnClick = ButtonCerosBClick
       TabOrder = 6
+      OnClick = ButtonCerosBClick
     end
     object ButtonEjemploB: TButton
       Left = 214
@@ -251,8 +240,8 @@ object FormMain: TFormMain
       Top = 228
       Width = 95
       Caption = 'Ejemplo B'
-      OnClick = ButtonEjemploBClick
       TabOrder = 7
+      OnClick = ButtonEjemploBClick
     end
   end
   object GroupBoxC: TGroupBox
@@ -261,14 +250,15 @@ object FormMain: TFormMain
     Top = 60
     Width = 330
     Caption = ' Matriz Resultado (C) '
-    ClientHeight = 270
+    ClientHeight = 268
     ClientWidth = 326
+    ParentBackground = False
     TabOrder = 2
     object LabelInfoC: TLabel
       Left = 10
-      Height = 17
+      Height = 15
       Top = 8
-      Width = 190
+      Width = 144
       Caption = 'Resultado de Operaciones'
       Font.Style = [fsBold]
       ParentColor = False
@@ -280,8 +270,8 @@ object FormMain: TFormMain
       Top = 4
       Width = 80
       Caption = 'Limpiar C'
-      OnClick = ButtonLimpiarCClick
       TabOrder = 0
+      OnClick = ButtonLimpiarCClick
     end
     object StringGridC: TStringGrid
       Left = 10
@@ -293,7 +283,6 @@ object FormMain: TFormMain
       DefaultRowHeight = 26
       FixedCols = 0
       FixedRows = 0
-      Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goSmoothScroll]
       RowCount = 3
       TabOrder = 1
     end
@@ -303,8 +292,8 @@ object FormMain: TFormMain
       Top = 228
       Width = 145
       Caption = 'Copiar C -> Matriz A'
-      OnClick = ButtonCopiarCAClick
       TabOrder = 2
+      OnClick = ButtonCopiarCAClick
     end
     object ButtonCopiarCB: TButton
       Left = 168
@@ -312,8 +301,8 @@ object FormMain: TFormMain
       Top = 228
       Width = 145
       Caption = 'Copiar C -> Matriz B'
-      OnClick = ButtonCopiarCBClick
       TabOrder = 3
+      OnClick = ButtonCopiarCBClick
     end
   end
   object GroupBoxGeneral: TGroupBox
@@ -322,8 +311,9 @@ object FormMain: TFormMain
     Top = 360
     Width = 240
     Caption = ' A) Matriz General (sobre A) '
-    ClientHeight = 205
+    ClientHeight = 203
     ClientWidth = 236
+    ParentBackground = False
     TabOrder = 3
     object ButtonCargarA: TButton
       Left = 15
@@ -331,8 +321,8 @@ object FormMain: TFormMain
       Top = 12
       Width = 205
       Caption = '1. Cargar desde Celdas'
-      OnClick = ButtonCargarAClick
       TabOrder = 0
+      OnClick = ButtonCargarAClick
     end
     object ButtonMostrarA: TButton
       Left = 15
@@ -340,8 +330,8 @@ object FormMain: TFormMain
       Top = 58
       Width = 205
       Caption = '2. Mostrar en Registro'
-      OnClick = ButtonMostrarAClick
       TabOrder = 1
+      OnClick = ButtonMostrarAClick
     end
     object ButtonBusquedaA: TButton
       Left = 15
@@ -349,8 +339,8 @@ object FormMain: TFormMain
       Top = 104
       Width = 205
       Caption = '3. Búsqueda de Elemento'
-      OnClick = ButtonBusquedaAClick
       TabOrder = 2
+      OnClick = ButtonBusquedaAClick
     end
     object ButtonOrdenamientoA: TButton
       Left = 15
@@ -358,8 +348,8 @@ object FormMain: TFormMain
       Top = 150
       Width = 205
       Caption = '4. Ordenamiento Ascendente'
-      OnClick = ButtonOrdenamientoAClick
       TabOrder = 3
+      OnClick = ButtonOrdenamientoAClick
     end
   end
   object GroupBoxCuadrada: TGroupBox
@@ -368,8 +358,9 @@ object FormMain: TFormMain
     Top = 360
     Width = 520
     Caption = ' B) Matriz Cuadrada (sobre A) '
-    ClientHeight = 205
+    ClientHeight = 203
     ClientWidth = 516
+    ParentBackground = False
     TabOrder = 4
     object ButtonTriangularesA: TButton
       Left = 12
@@ -377,8 +368,8 @@ object FormMain: TFormMain
       Top = 12
       Width = 155
       Caption = 'Verif. Triangulares'
-      OnClick = ButtonTriangularesAClick
       TabOrder = 0
+      OnClick = ButtonTriangularesAClick
     end
     object ButtonHacerTriangSup: TButton
       Left = 12
@@ -386,8 +377,8 @@ object FormMain: TFormMain
       Top = 58
       Width = 155
       Caption = 'Gen. Triang. Superior'
-      OnClick = ButtonHacerTriangSupClick
       TabOrder = 1
+      OnClick = ButtonHacerTriangSupClick
     end
     object ButtonHacerTriangInf: TButton
       Left = 12
@@ -395,8 +386,8 @@ object FormMain: TFormMain
       Top = 104
       Width = 155
       Caption = 'Gen. Triang. Inferior'
-      OnClick = ButtonHacerTriangInfClick
       TabOrder = 2
+      OnClick = ButtonHacerTriangInfClick
     end
     object ButtonInvertirA: TButton
       Left = 12
@@ -404,8 +395,8 @@ object FormMain: TFormMain
       Top = 150
       Width = 155
       Caption = 'Invertir Elementos'
-      OnClick = ButtonInvertirAClick
       TabOrder = 3
+      OnClick = ButtonInvertirAClick
     end
     object ButtonDiagPrincipalA: TButton
       Left = 178
@@ -413,8 +404,8 @@ object FormMain: TFormMain
       Top = 12
       Width = 155
       Caption = 'Diagonal Principal'
-      OnClick = ButtonDiagPrincipalAClick
       TabOrder = 4
+      OnClick = ButtonDiagPrincipalAClick
     end
     object ButtonDiagSecundariaA: TButton
       Left = 178
@@ -422,8 +413,8 @@ object FormMain: TFormMain
       Top = 58
       Width = 155
       Caption = 'Diagonal Secundaria'
-      OnClick = ButtonDiagSecundariaAClick
       TabOrder = 5
+      OnClick = ButtonDiagSecundariaAClick
     end
     object ButtonDeterminanteA: TButton
       Left = 178
@@ -432,9 +423,9 @@ object FormMain: TFormMain
       Width = 155
       Caption = 'Determinante det(A)'
       Font.Style = [fsBold]
-      OnClick = ButtonDeterminanteAClick
       ParentFont = False
       TabOrder = 6
+      OnClick = ButtonDeterminanteAClick
     end
     object ButtonTranspuestaA: TButton
       Left = 345
@@ -443,9 +434,9 @@ object FormMain: TFormMain
       Width = 155
       Caption = 'Transpuesta (A^T)'
       Font.Style = [fsBold]
-      OnClick = ButtonTranspuestaAClick
       ParentFont = False
       TabOrder = 7
+      OnClick = ButtonTranspuestaAClick
     end
     object ButtonInversaA: TButton
       Left = 345
@@ -454,9 +445,9 @@ object FormMain: TFormMain
       Width = 155
       Caption = 'Matriz Inversa (A^-1)'
       Font.Style = [fsBold]
-      OnClick = ButtonInversaAClick
       ParentFont = False
       TabOrder = 8
+      OnClick = ButtonInversaAClick
     end
   end
   object GroupBoxBinarias: TGroupBox
@@ -465,8 +456,9 @@ object FormMain: TFormMain
     Top = 360
     Width = 230
     Caption = ' Operaciones Binarias '
-    ClientHeight = 205
+    ClientHeight = 203
     ClientWidth = 226
+    ParentBackground = False
     TabOrder = 5
     object ButtonSumar: TButton
       Left = 15
@@ -474,8 +466,8 @@ object FormMain: TFormMain
       Top = 12
       Width = 195
       Caption = 'Sumar: C = A + B'
-      OnClick = ButtonSumarClick
       TabOrder = 0
+      OnClick = ButtonSumarClick
     end
     object ButtonRestar: TButton
       Left = 15
@@ -483,8 +475,8 @@ object FormMain: TFormMain
       Top = 58
       Width = 195
       Caption = 'Restar: C = A - B'
-      OnClick = ButtonRestarClick
       TabOrder = 1
+      OnClick = ButtonRestarClick
     end
     object ButtonMultiplicar: TButton
       Left = 15
@@ -492,8 +484,8 @@ object FormMain: TFormMain
       Top = 104
       Width = 195
       Caption = 'Multiplicar: C = A * B'
-      OnClick = ButtonMultiplicarClick
       TabOrder = 2
+      OnClick = ButtonMultiplicarClick
     end
     object ButtonDemoCompleta: TButton
       Left = 15
@@ -502,9 +494,9 @@ object FormMain: TFormMain
       Width = 195
       Caption = 'Demostración Rápida'
       Font.Style = [fsBold]
-      OnClick = ButtonDemoCompletaClick
       ParentFont = False
       TabOrder = 3
+      OnClick = ButtonDemoCompletaClick
     end
   end
   object GroupBoxLog: TGroupBox
@@ -513,16 +505,17 @@ object FormMain: TFormMain
     Top = 595
     Width = 1020
     Caption = ' Registro de Operaciones y Resultados '
-    ClientHeight = 120
+    ClientHeight = 118
     ClientWidth = 1016
+    ParentBackground = False
     TabOrder = 6
     object MemoLog: TMemo
       Left = 15
       Height = 98
       Top = 10
       Width = 880
-      Font.Name = 'Consolas'
       Font.Height = -12
+      Font.Name = 'Consolas'
       ParentFont = False
       ReadOnly = True
       ScrollBars = ssAutoBoth
@@ -534,8 +527,8 @@ object FormMain: TFormMain
       Top = 10
       Width = 95
       Caption = 'Limpiar'#13#10'Registro'
-      OnClick = ButtonLimpiarLogClick
       TabOrder = 1
+      OnClick = ButtonLimpiarLogClick
     end
   end
 end

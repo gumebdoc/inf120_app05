@@ -15,7 +15,6 @@ type
   TFormMain = class(TForm)
     // Encabezado
     LabelTitulo: TLabel;
-    LabelSubtitulo: TLabel;
     LabelAutor: TLabel;
 
     // Matriz A
@@ -166,11 +165,7 @@ begin
   // Inicializar Matriz B con valores de ejemplo (3x3)
   ButtonEjemploBClick(nil);
 
-  Log('========================================================================');
-  Log('Bienvenido a la Aplicacion U5: Clase Matriz (Lazarus - Pascal)');
-  Log('Materia: Programacion I (INF120) | Evans Balcazar | Gustavo Melgar');
-  Log('========================================================================');
-  Log('Sistemas listos. Puede editar los valores directamente en las celdas.');
+
 end;
 
 procedure TFormMain.FormDestroy(Sender: TObject);
